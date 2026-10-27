@@ -1,0 +1,186 @@
+
+.portfolio-intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: #080a12;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 99999;
+
+  animation: introExit 0.8s ease 3.7s forwards;
+}
+
+
+.portfolio-intro-content {
+  text-align: center;
+}
+
+.portfolio-intro-content p {
+  font-size: 14px;
+  letter-spacing: 7px;
+
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.portfolio-intro-content h1 {
+  font-size: clamp(40px, 7vw, 90px);
+  margin: 15px 0;
+
+  opacity: 0;
+  transform: translateY(30px);
+
+  animation: fadeUp 0.8s ease 0.3s forwards;
+}
+
+.portfolio-intro-content h1 span {
+  color: #8b5cf6;
+}
+
+.portfolio-intro-line {
+  height: 2px;
+  width: 0;
+
+  background: #8b5cf6;
+
+  margin: 20px auto;
+
+  animation: lineGrow 0.7s ease 0.8s forwards;
+}
+
+
+/* النص يدخل من تحت */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* الخط يتمدد */
+
+@keyframes lineGrow {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+
+/* شاشة الترحيب تطلع لفوق */
+@keyframes introExit {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+
+
+
+
+
+
+
+
+/* WEBSITE TYPEWRITER */
+.intro-website {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-top: 28px;
+  min-height: 35px;
+
+  opacity: 0;
+  animation: websiteAppear 0.4s ease-out 1.3s forwards;
+}
+
+
+
+/* GLOBE ICON */
+.intro-globe {
+  font-size: 26px;
+  color: #c4b5fd;
+
+  filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.8));
+}
+
+/* GLOWING WEBSITE TEXT */
+.intro-website-text {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(14px, 2.5vw, 21px);
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  color: #ddd6fe;
+
+  text-shadow:
+    0 0 8px rgba(196, 181, 253, 0.9),
+    0 0 20px rgba(139, 92, 246, 0.7),
+    0 0 40px rgba(59, 130, 246, 0.35);
+}
+
+/* BLINKING CURSOR */
+.intro-cursor {
+  font-size: 24px;
+  color: #a78bfa;
+
+  text-shadow: 0 0 12px #8b5cf6;
+
+  animation: cursorBlink 0.65s step-end infinite;
+}
+
+/* ENTRANCE */
+@keyframes websiteAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CURSOR BLINK */
+@keyframes cursorBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-website {
+    animation: none;
+    opacity: 1;
+  }
+
+  .intro-cursor {
+    animation: none;
+  }
+}

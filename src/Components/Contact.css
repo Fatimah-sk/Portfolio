@@ -1,0 +1,567 @@
+
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
+.contact-section {
+  position: relative;
+  padding: 80px 8%;
+  box-sizing: border-box;
+  overflow: hidden;
+  scroll-margin-top: 15px;
+
+}
+
+.contact-section .section-title {
+  width: 100%;
+  margin-bottom: 55px;
+}
+
+/* ========================================
+   CONTACT LAYOUT
+======================================== */
+
+.contact-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ========================================
+   LEFT SIDE
+======================================== */
+
+.contact-text {
+  min-width: 0;
+  position: relative;
+  top: -60px;
+}
+.contact-text h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #f5f5f5;
+}
+
+.contact-text p {
+  max-width: 550px;
+  color: #a5a8b5;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   SOCIAL ICONS
+======================================== */
+
+.contact-socials {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.contact-socials a {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(139, 92, 246, 0.14);
+  border: 1px solid rgba(167, 139, 250, 0.45);
+  border-radius: 12px;
+
+  color: #c4b5fd;
+  font-size: 23px;
+  text-decoration: none;
+
+  box-shadow:
+    0 0 15px rgba(139, 92, 246, 0.35),
+    0 0 30px rgba(139, 92, 246, 0.18),
+    inset 0 0 12px rgba(139, 92, 246, 0.1);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.contact-socials a:hover {
+  transform: translateY(-4px);
+  color: #ffffff;
+  background: rgba(139, 92, 246, 0.25);
+  border-color: #a78bfa;
+
+  box-shadow:
+    0 0 20px rgba(139, 92, 246, 0.65),
+    0 0 45px rgba(139, 92, 246, 0.35),
+    inset 0 0 15px rgba(139, 92, 246, 0.2);
+}
+
+.contact-socials a:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 4px;
+}
+
+/* ========================================
+   RIGHT SIDE - JSON VISUAL
+======================================== */
+
+.contact-code-visual {
+  width: 100%;
+  min-width: 0;
+  padding: 30px 0;
+  position: relative;
+  top: -70px;
+}
+
+/* ========================================
+   CODE CARD WRAPPER
+======================================== */
+
+.code-card-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 570px;
+  margin: auto;
+
+  isolation: isolate;
+  perspective: 1200px;
+
+  transition: transform 0.4s ease;
+}
+
+.code-card-wrapper:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* ========================================
+   PURPLE & BLUE GLOW
+======================================== */
+
+.code-card-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -70px;
+
+  background:
+    radial-gradient(
+      ellipse at 30% 40%,
+      rgba(139, 92, 246, 0.45),
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse at 80% 75%,
+      rgba(59, 130, 246, 0.35),
+      transparent 65%
+    );
+
+  filter: blur(45px);
+  z-index: -2;
+  pointer-events: none;
+
+  animation: codeGlow 5s ease-in-out infinite;
+}
+
+/* ========================================
+   BACKGROUND LAYERS
+======================================== */
+
+.code-back-layer {
+  position: absolute;
+  inset: 0;
+
+  border-radius: 24px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.layer-one {
+  transform: rotate(-12deg) translate(-15px, 5px);
+
+  background: rgba(139, 92, 246, 0.09);
+  border: 1px solid rgba(167, 139, 250, 0.4);
+
+  box-shadow:
+    0 0 30px rgba(139, 92, 246, 0.12);
+}
+
+.layer-two {
+  transform: rotate(10deg) translate(15px, 5px);
+
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+
+  box-shadow:
+    0 0 30px rgba(59, 130, 246, 0.12);
+}
+
+/* ========================================
+   MAIN JSON CARD
+======================================== */
+
+.code-card {
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(19, 20, 48, 0.98),
+    rgba(11, 15, 35, 0.98)
+  );
+
+  border: 1px solid rgba(167, 139, 250, 0.85);
+
+  transform: rotate(2deg);
+
+  box-shadow:
+    0 35px 80px rgba(0, 0, 0, 0.6),
+    0 0 35px rgba(139, 92, 246, 0.35),
+    0 0 80px rgba(59, 130, 246, 0.2);
+
+  transition: box-shadow 0.4s ease;
+}
+
+.code-card:hover {
+  box-shadow:
+    0 40px 90px rgba(0, 0, 0, 0.65),
+    0 0 45px rgba(139, 92, 246, 0.45),
+    0 0 100px rgba(59, 130, 246, 0.25);
+}
+
+/* ========================================
+   TERMINAL HEADER
+======================================== */
+
+.code-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 17px 22px;
+
+  border-bottom: 1px solid rgba(167, 139, 250, 0.15);
+
+  color: #9991c6;
+  font-family: Consolas, monospace;
+  font-size: 13px;
+
+  background: rgba(139, 92, 246, 0.04);
+}
+
+.code-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.code-dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.code-dots span:nth-child(1) {
+  background: #ff5277;
+}
+
+.code-dots span:nth-child(2) {
+  background: #ffc83d;
+}
+
+.code-dots span:nth-child(3) {
+  background: #28d77c;
+}
+
+/* ========================================
+   JSON CODE
+======================================== */
+
+.code-card-body {
+  padding: 25px 20px 30px;
+
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  line-height: 2;
+  color: #f1f1f7;
+
+  overflow-x: auto;
+}
+
+.code-line {
+  display: flex;
+  white-space: pre;
+}
+
+.line-number {
+  width: 35px;
+  flex-shrink: 0;
+  color: #777a9f;
+  user-select: none;
+}
+
+.indent {
+  padding-left: 20px;
+}
+
+.double-indent {
+  padding-left: 40px;
+}
+
+.json-key {
+  color: #c084fc;
+}
+
+.json-string {
+  color: #67e8f9;
+}
+
+.json-boolean {
+  color: #4ade80;
+}
+
+/* ========================================
+   FLOATING CODE ICON
+======================================== */
+
+.code-floating-icon {
+  position: absolute;
+  top: 45%;
+  right: -28px;
+
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+  border: 1px solid #a855f7;
+
+  background: linear-gradient(
+    145deg,
+    #301758,
+    #181438
+  );
+
+  color: #c084fc;
+  font-size: 35px;
+
+  box-shadow:
+    0 0 25px rgba(168, 85, 247, 0.65),
+    0 0 55px rgba(139, 92, 246, 0.3);
+
+  z-index: 2;
+}
+
+/* ========================================
+   BREATHING GLOW ANIMATION
+======================================== */
+
+@keyframes codeGlow {
+  0%, 100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.07);
+  }
+}
+
+/* ========================================
+   SCROLL ENTRANCE ANIMATIONS
+======================================== */
+
+.contact-ready .contact-reveal-title,
+.contact-ready .contact-reveal-left,
+.contact-ready .contact-reveal-right {
+  opacity: 0;
+}
+
+.contact-static .contact-reveal-title,
+.contact-static .contact-reveal-left,
+.contact-static .contact-reveal-right {
+  opacity: 1;
+  translate: 0 0;
+  animation: none;
+}
+
+/* Title enters from top */
+
+.contact-playing .contact-reveal-title {
+  animation: contactFromTop 0.8s ease-out 0.15s both;
+}
+
+/* Text enters from left */
+
+.contact-playing .contact-reveal-left {
+  animation: contactFromLeft 0.8s ease-out 0.15s both;
+}
+
+/* JSON card enters from right */
+
+.contact-playing .contact-reveal-right {
+  animation: contactFromRight 0.9s ease-out 0.2s both;
+}
+
+/* ========================================
+   ENTRANCE KEYFRAMES
+======================================== */
+
+@keyframes contactFromTop {
+  from {
+    opacity: 0;
+    translate: 0 -70px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes contactFromLeft {
+  from {
+    opacity: 0;
+    translate: -70px 0;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes contactFromRight {
+  from {
+    opacity: 0;
+    translate: 70px 0;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+  .contact-section {
+    padding: 65px 8%;
+  }
+
+  .contact-container {
+    gap: 50px;
+  }
+
+  .contact-text h3 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .code-card-wrapper {
+    max-width: 500px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 50px 6%;
+  }
+
+  .contact-section .section-title {
+    margin-bottom: 40px;
+  }
+
+  .contact-text h3 {
+    font-size: 26px;
+  }
+
+  .contact-socials {
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .contact-socials a {
+    width: 44px;
+    height: 44px;
+    font-size: 21px;
+  }
+
+  .contact-code-visual {
+    padding: 20px 12px;
+  }
+
+  .code-card {
+    transform: rotate(0);
+  }
+
+  .layer-one {
+    transform: rotate(-5deg);
+  }
+
+  .layer-two {
+    transform: rotate(5deg);
+  }
+
+  .code-card-body {
+    font-size: 11px;
+    padding: 20px 10px;
+  }
+
+  .code-floating-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 26px;
+    right: -10px;
+  }
+
+  .code-card-wrapper:hover {
+    transform: none;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-reveal-title,
+  .contact-reveal-left,
+  .contact-reveal-right {
+    opacity: 1 !important;
+    translate: none !important;
+    animation: none !important;
+  }
+
+  .code-card-wrapper::before {
+    animation: none;
+  }
+
+  .code-card-wrapper {
+    transition: none;
+  }
+}

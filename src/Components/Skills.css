@@ -1,0 +1,255 @@
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.skills-section {
+  padding: 80px 8%;
+}
+
+/* =========================
+   SKILLS GRID
+========================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* =========================
+   SKILL CARD
+========================= */
+
+.skill-card {
+  height: 180px;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 18px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  border-color: #8b5cf6;
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.15);
+}
+
+/* =========================
+   SKILL ICON
+========================= */
+
+.skill-icon {
+  font-size: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #a78bfa;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.12);
+  color: #8b5cf6;
+}
+
+/* =========================
+   SKILL NAME
+========================= */
+
+.skill-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #f5f5f5;
+  margin: 0;
+}
+
+/* =========================
+   ENTRANCE STATES
+========================= */
+
+.skills-ready .skills-reveal-title,
+.skills-ready .skills-reveal-card {
+  opacity: 0;
+}
+
+.skills-static .skills-reveal-title,
+.skills-static .skills-reveal-card {
+  opacity: 1;
+  translate: 0 0;
+  animation: none;
+}
+
+/* =========================
+   ENTRANCE ANIMATIONS
+========================= */
+
+.skills-playing .skills-reveal-title {
+  animation: skillsFromTop 0.8s ease-out 0.15s both;
+}
+
+.skills-playing .skills-reveal-card {
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  animation-delay: 0.15s;
+}
+
+/* DESKTOP: 6 COLUMNS */
+
+.skills-playing .skill-card:nth-child(6n + 1),
+.skills-playing .skill-card:nth-child(6n + 2) {
+  animation-name: skillsFromLeft;
+}
+
+.skills-playing .skill-card:nth-child(6n + 3),
+.skills-playing .skill-card:nth-child(6n + 4) {
+  animation-name: skillsFromBottom;
+}
+
+.skills-playing .skill-card:nth-child(6n + 5),
+.skills-playing .skill-card:nth-child(6n + 6) {
+  animation-name: skillsFromRight;
+}
+
+/* =========================
+   KEYFRAMES
+========================= */
+
+@keyframes skillsFromTop {
+  from {
+    opacity: 0;
+    translate: 0 -65px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes skillsFromLeft {
+  from {
+    opacity: 0;
+    translate: -75px 0;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes skillsFromRight {
+  from {
+    opacity: 0;
+    translate: 75px 0;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes skillsFromBottom {
+  from {
+    opacity: 0;
+    translate: 0 75px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .skills-section {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .skills-playing .skill-card:nth-child(n) {
+    animation-name: skillsFromBottom;
+  }
+
+  .skills-playing .skill-card:nth-child(4n + 1) {
+    animation-name: skillsFromLeft;
+  }
+
+  .skills-playing .skill-card:nth-child(4n) {
+    animation-name: skillsFromRight;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .skills-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .skill-card {
+    height: 150px;
+  }
+
+  .skill-icon {
+    font-size: 55px;
+  }
+
+  .skills-playing .skill-card:nth-child(n) {
+    animation-name: skillsFromLeft;
+  }
+
+  .skills-playing .skill-card:nth-child(2n) {
+    animation-name: skillsFromRight;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-playing .skills-reveal-title,
+  .skills-playing .skills-reveal-card {
+    opacity: 1;
+    translate: 0 0;
+    animation: none !important;
+  }
+}

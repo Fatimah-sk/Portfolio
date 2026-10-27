@@ -1,0 +1,71 @@
+
+.hero-typewriter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  min-height: 30px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+/* Technology icon */
+/* Technology name */
+.hero-typed-text {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+
+  color: #eeeef4;
+  text-shadow: none;
+}
+
+/* Technology icon */
+.hero-tech-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+
+  color: #b8b8c5;
+  filter: none;
+}
+
+/* Typing cursor */
+.hero-typing-cursor {
+  width: 2px;
+  height: 21px;
+  flex-shrink: 0;
+
+  background: #a78bfa;
+  border-radius: 2px;
+  box-shadow: none;
+
+  animation: heroCursorBlink 0.7s step-end infinite;
+}
+
+@keyframes heroCursorBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-typewriter {
+    justify-content: center;
+  }
+
+  .hero-typed-text {
+    font-size: 16px;
+  }
+
+  .hero-tech-icon {
+    font-size: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-typing-cursor {
+    animation: none;
+  }
+}
