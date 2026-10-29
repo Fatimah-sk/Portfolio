@@ -125,8 +125,8 @@ const ProjectsArray = [
     description: 'A personal portfolio website showcasing my skills, projects, and experience.',
     image: PortfolioWebsiteImage,
     technologies: ['CSS', 'HTML', 'JavaScript', 'React'],
-    liveDemo: 'https://fatimah-sk.github.io/Portfolio-Website/',
-    github: 'https://github.com/Fatimah-sk/Portfolio-Website',
+    liveDemo: 'https://fatimah-sk.github.io/Portfolio/',
+    github: 'https://github.com/Fatimah-sk/Portfolio',
   },
   {
     id: 13,
