@@ -1,33 +1,3 @@
-/* import { useEffect } from "react";
-import "./Intro.css";
-
-function Intro({ onFinish }) {
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      onFinish();
-    }, 2600);
-
-    return () => clearTimeout(timer);
-  }, [onFinish]);
-
-  return (
-    <div className="portfolio-intro">
-      <div className="portfolio-intro-content">
-        <p>WELCOME TO</p>
-
-        <h1>
-          FATIMAH'S
-          <span> PORTFOLIO</span>
-        </h1>
-
-        <div className="portfolio-intro-line"></div>
-      </div>
-    </div>
-  );
-}
-
-export default Intro; */
-
 
 import { useEffect, useState } from "react";
 import { FiGlobe } from "react-icons/fi";
