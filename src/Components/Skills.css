@@ -70,6 +70,16 @@
   transform: scale(1.12);
   color: #8b5cf6;
 }
+/* SQL SERVER ICON */
+
+.sql-server-icon {
+  transform: scale(1.25);
+  transform-origin: center;
+  color: inherit;
+  stroke: currentColor;
+  stroke-width: 0.4px;
+  paint-order: stroke fill;
+}
 
 /* =========================
    SKILL NAME

@@ -29,7 +29,7 @@ const skills = [
   { name: 'Vite', icon: <SiVite /> },
   { name: 'Node.js', icon: <FaNodeJs /> },
   { name: 'Express', icon: <SiExpress /> },
-  { name: 'SQL Server', icon: <DiMsqlServer /> },
+  { name: 'SQL Server', icon: <DiMsqlServer className="sql-server-icon" />},
   { name: 'Bootstrap', icon: <FaBootstrap /> },
   { name: 'Git', icon: <FaGitAlt /> },
   { name: 'GitHub', icon: <FaGithub /> },
