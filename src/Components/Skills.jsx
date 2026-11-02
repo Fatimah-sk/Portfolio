@@ -1,6 +1,7 @@
 
 import { useLayoutEffect, useRef, useState } from 'react'
 import './Skills.css'
+import { DiMsqlServer } from "react-icons/di";
 
 import {
   FaHtml5,
@@ -28,7 +29,7 @@ const skills = [
   { name: 'Vite', icon: <SiVite /> },
   { name: 'Node.js', icon: <FaNodeJs /> },
   { name: 'Express', icon: <SiExpress /> },
-  { name: 'SQL', icon: <SiMysql /> },
+  { name: 'SQL Server', icon: <DiMsqlServer /> },
   { name: 'Bootstrap', icon: <FaBootstrap /> },
   { name: 'Git', icon: <FaGitAlt /> },
   { name: 'GitHub', icon: <FaGithub /> },
