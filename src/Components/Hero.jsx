@@ -61,7 +61,7 @@ function Hero() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/fatimah-sakhnine-510b83318"
+            href="https://www.linkedin.com/in/fatimah-sakhnine-68434243b/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"

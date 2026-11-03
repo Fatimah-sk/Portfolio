@@ -1,101 +1,4 @@
-/* import { useEffect, useRef, useState } from 'react'
-import './Contact.css'
 
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
-import { FiExternalLink } from 'react-icons/fi'
-
-function Contact() {
-  const sectionRef = useRef(null)
-  const [animationMode, setAnimationMode] = useState('static')
-
-  useEffect(() => {
-    const section = sectionRef.current
-    if (!section) return
-
-    let lastY = window.scrollY
-    let wasInZone = false
-
-    const handleScroll = () => {
-      const currentY = window.scrollY
-      const goingDown = currentY > lastY
-      const goingUp = currentY < lastY
-      lastY = currentY
-
-      const rect = section.getBoundingClientRect()
-      const triggerLine = window.innerHeight * 0.65
-      const inZone = rect.top <= triggerLine && rect.bottom > triggerLine
-
-      if (!inZone) {
-        wasInZone = false
-        // Reset only when the entire section is below the trigger line.
-        // Its content is then off-screen, so the reset is not visible.
-        if (rect.top > triggerLine) setAnimationMode('ready')
-        else setAnimationMode('static')
-        return
-      }
-
-      if (!wasInZone) {
-        wasInZone = true
-        setAnimationMode(goingDown ? 'playing' : 'static')
-      } else if (goingUp) {
-        // Scrolling upward should show everything, without a replay.
-        setAnimationMode('static')
-      }
-    }
-
-    // Establish the initial state without assuming scroll direction.
-    const initialRect = section.getBoundingClientRect()
-    if (initialRect.top > window.innerHeight * 0.65) {
-      setAnimationMode('ready')
-    } else {
-      setAnimationMode('static')
-      wasInZone = initialRect.bottom > window.innerHeight * 0.65
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  return (
-    <section id="contact" ref={sectionRef} className={`contact-section contact-${animationMode}`}>
-      <div className="section-title contact-reveal-title">
-        <p>GET IN TOUCH</p>
-        <h2>Let's <span>Connect</span></h2>
-      </div>
-
-      <div className="contact-container">
-        <div className="contact-text contact-reveal-left">
-          <h3>Let's build something together.</h3>
-          <p>I'm always open to new opportunities, collaborations and interesting projects.</p>
-          <p>Feel free to reach out — I'd love to hear from you.</p>
-          <p>Fatimah-Sakhnine@hotmail.com</p>
-        </div>
-
-        <div className="contact-links">
-          <a href="https://github.com/Fatimah-sk" target="_blank" rel="noreferrer" className="contact-card contact-reveal-right">
-            <div className="contact-icon github-icon"><FaGithub /></div>
-            <div className="contact-info"><h3>GitHub</h3><p>Fatimah-sk</p></div>
-            <FiExternalLink className="contact-arrow" />
-          </a>
-          <a href="https://www.linkedin.com/in/fatimah-sakhnine-510b83318" target="_blank" rel="noreferrer" className="contact-card contact-reveal-right">
-            <div className="contact-icon linkedin-icon"><FaLinkedin /></div>
-            <div className="contact-info"><h3>LinkedIn</h3><p>View Profile</p></div>
-            <FiExternalLink className="contact-arrow" />
-          </a>
-          <a href="mailto:Fatimah-Sakhnine@hotmail.com" className="contact-card contact-reveal-right">
-            <div className="contact-icon email-icon"><MdEmail /></div>
-            <div className="contact-info"><h3>Email</h3><p>Send a Message</p></div>
-            <FiExternalLink className="contact-arrow" />
-          </a>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-export default Contact
- */
 
 import { useEffect, useRef, useState } from 'react'
 import './Contact.css'
@@ -186,7 +89,7 @@ function Contact() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/fatimah-sakhnine-510b83318"
+              href="https://www.linkedin.com/in/fatimah-sakhnine-68434243b/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
